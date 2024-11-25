@@ -5,10 +5,6 @@
 <!--  ----------------------------------------------------------------------  -->
 
 <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
-<script src="https://www.google.com/recaptcha/api.js"></script>
-<script>
- function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); 
-</script>
 
 <!--  ----------------------------------------------------------------------  -->
 <!--  NOTE: Please add the following <FORM> element to your page.             -->
@@ -16,7 +12,6 @@
 
 <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DDp000001nSn6" method="POST">
 
-<input type=hidden name='captcha_settings' value='{"keyname":"Censorship","fallback":"true","orgId":"00DDp000001nSn6","ts":""}'>
 <input type=hidden name="orgid" value="00DDp000001nSn6">
 <input type=hidden name="retURL" value="http://milnebay.gov.pg/">
 
@@ -28,13 +23,31 @@
 <!--  value="peteryanda64@gmail.com">                                         -->
 <!--  ----------------------------------------------------------------------  -->
 
-<label for="subject">Subject</label><input  id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
+<label for="name">Contact Name</label><input  id="name" maxlength="80" name="name" size="20" type="text" /><br>
+
+<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
 
 <label for="phone">Phone</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
 
+<label for="subject">Subject</label><input  id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
+
 <label for="description">Description</label><textarea name="description"></textarea><br>
 
-<div class="g-recaptcha" data-sitekey="Censorship"></div><br>
+DCD Section:<select  id="00NDp000009U7dN" name="00NDp000009U7dN" title="DCD Section"><option value="">--None--</option><option value="Censorship">Censorship</option>
+<option value="Child &amp; Social Welfare">Child &amp; Social Welfare</option>
+<option value="Church Government Partnership">Church Government Partnership</option>
+<option value="Civil Registry">Civil Registry</option>
+<option value="Disability">Disability</option>
+<option value="Elderly">Elderly</option>
+<option value="GBV">GBV</option>
+<option value="Informal Sector">Informal Sector</option>
+<option value="Sports">Sports</option>
+<option value="Team Milne Bay">Team Milne Bay</option>
+<option value="Woman">Woman</option>
+<option value="Youth">Youth</option>
+<option value="Others">Others</option>
+</select><br>
+
 <input type="submit" name="submit">
 
 </form>
